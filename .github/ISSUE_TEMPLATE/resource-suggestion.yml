@@ -1,0 +1,57 @@
+name: Resource suggestion / 资源建议
+description: Suggest a useful source, dictionary, or reading tool with evidence and disclosure.
+title: "[Resource] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping readers. Please read CONTRIBUTING.md in the repository.
+        中文填写也可以。请使用官方链接，并说明你与资源的关系。不要提交凭据或第三方译注全文。
+  - type: input
+    id: resource_name
+    attributes:
+      label: Resource name / 资源名称
+    validations:
+      required: true
+  - type: input
+    id: official_url
+    attributes:
+      label: Official URL / 官方链接
+      placeholder: https://example.org/
+    validations:
+      required: true
+  - type: textarea
+    id: task_and_scope
+    attributes:
+      label: Reading task and scope / 用途与范围
+      description: What specific task does it help with? What does it add to this list? Describe subject, languages, and a limitation in your own words.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Operator and evidence / 运营者与资料来源
+      description: Identify the operator or community and link official pages supporting the description.
+    validations:
+      required: true
+  - type: textarea
+    id: access
+    attributes:
+      label: Access and check date / 访问条件与核查日期
+      description: Include account or payment requirements if known, the date, and what you opened or tested. Say when access was blocked or conditions are unknown.
+    validations:
+      required: true
+  - type: textarea
+    id: affiliation
+    attributes:
+      label: Your relationship / 你与资源的关系
+      description: Creator, employee, contributor, affiliate, or none. Self-suggestions are welcome with disclosure.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission check / 提交检查
+      options:
+        - label: I used official links and original wording, and did not include credentials or copied third-party content.
+          required: true
